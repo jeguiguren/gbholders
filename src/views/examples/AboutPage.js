@@ -38,7 +38,7 @@ function AboutPage() {
     <>
       <ExamplesNavbar />
       <div className="wrapper">
-        <GenericHeader image={headerImage} title="La Firma" subtitle="Representantes de obligacionistas"/>
+        <GenericHeader image={headerImage} subtitle="Representantes de obligacionistas"/>
         <Section className="section-team text-center" title="Nosotros" >
           <Col className="ml-auto mr-auto text-center" md="8">
             <h5 className="description">

@@ -10,7 +10,7 @@ import {
 
 export default class Section extends React.Component {
   render() {
-    const bColor = this.props.greyBackground ? '#f2f2f2' : 'white';
+    const bColor = this.props.greyBackground ? 'rgb(247, 248, 252)' : 'white';
     const cName = `section ${this.props.className}`;
     console.log(cName);
     return (

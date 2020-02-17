@@ -25,7 +25,7 @@ function TeamMember(props) {
           className="rounded-circle img-fluid img-raised"
           src={member.headhsot}
         ></img>
-        <h4 className="title">{member.name}</h4>
+        <h4 className="title" style={{marginTop: 0}}>{member.name}</h4>
         <p className="category text-info">{member.title}</p>
         <p className="description">{member.bio}</p>
         <Button

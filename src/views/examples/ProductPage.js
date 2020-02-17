@@ -4,35 +4,64 @@ import React, { useState } from "react";
 import {
   Row,
   Col,
-
 } from "reactstrap";
 
+import { 
+  Icon,
+} from '@material-ui/core/';
 
 import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
 import GenericHeader from "components/Headers/GenericHeader.js";
 import DefaultFooter from "components/Footers/DefaultFooter.js";
 import Section from 'components/General/Section.js';
+import Contact from "components/General/Contact.js";
+import TouchAppIcon from '@material-ui/icons/TouchApp';
+import GavelIcon from '@material-ui/icons/Gavel';
+import CheckCircleOutlineIcon from '@material-ui/icons/CheckCircleOutline';
 
 
-function ImageRow(props) {
+function Step(props) {
+  const { step } = props;
   return (
-    <Row>
-      <Col className="ml-auto mr-auto" md="8">
-        <h2 className="text">Este es un titulo</h2>
-        <h5 className="text">{summary}</h5>
-      </Col>
-
-    </Row>
+    <Col md="4">
+      <div className="team-player">
+        {step.icon}
+        <p className="category text-info">{step.title}</p>
+        <p className="description">{step.summary}</p>
+      </div>
+    </Col>
+          
   );
 }
+//
+const stepsToTake = [
+  {
+    title: "Contacto",
+    summary: "Si tiene pensado emitir obligaciones en Bolsa, contáctenos para Representante de Obligacionistas",
+    icon: <TouchAppIcon style={{fontSize: 36, margin: 20,}}/>,
+  },
+  {
+    title: "Emisión",
+    summary: "Firmamos el acuerdo, obtiene acceso a la plataforma web.",
+    icon: <GavelIcon style={{fontSize: 36, margin: 20,}}/>,
+  },
+  {
+    title: "Reporte",
+    summary: "Agentes financieros reportan informes periodicamente, y tienen acceso a los informes juridicos. ",
+    icon: <CheckCircleOutlineIcon style={{fontSize: 36, margin: 20,}}/>,
+  },
+];
 
 
-const summary = "La empresa emisora deberá celebrar con una persona jurídica, \
-especializada en tal objeto, un Convenio de Representación a fin de que ésta tome \
-a su cargo la defensa de los derechos e intereses que colectivamente corresponda a \
-los obligacionistas durante la vigencia de la emisión y hasta su cancelación total. \
-Dicho representante quedará sujeto a la supervisión y control de la Superintendencia \
-de Compañías, en cuanto a su calidad de representante."
+
+const summary = "Aquí tienen que ir dos oraciones más de resumen de la GBH y como se relaciona al mercado de valores en \
+              terminos de representacion de obligacionistas. Al final una oración más describiendo la plataforma e invitando \
+              a probarla.";
+
+const appSummary = "Aquí tienen que ir 3-4 oraciones describiendo la plataforma e invitando a probarla. Por que \
+  trae el valor agregado y simplifica el trabajo de sus agentes financieros. Enfatizar seguridad, facilidad, availability. (en vertical grid form) ";
+
+
 
 function ProductPage(props) {
   const headerImage = "url(" + require("assets/img/bg4.jpg") + ")";
@@ -49,18 +78,25 @@ function ProductPage(props) {
     <>
       <ExamplesNavbar />
       <div className="wrapper">
-        <GenericHeader image={headerImage} subtitle="Representantes de Obligacionistas"/>
+        <GenericHeader image={headerImage} subtitle="Modernizamos los reportes financieros"/>
         <Section className="text-center" title="Convenio de Representación">
           <Col className="ml-auto mr-auto text-center" md="10">
             <h5 className="text">{summary}</h5>
           </Col>
         </Section>
-        <Section title="Tipos de emisiones">
-          <Col className="ml-auto mr-auto" md="14">
-            <h5 className="text">{summary}</h5>
+        <Section className="text-center" title="Nuestra Aplicación Web" greyBackground={true}>
+          <Col className="ml-auto mr-auto text-center" md="10">
+            <h5 className="text">{appSummary}</h5>
           </Col>
         </Section>
-        <ImageRow/>
+        <Section className="text-center" title="Trabajemos juntos" >
+          <h5 className="text">Una oracion corta de los pasos a seguir</h5>
+          <Row>
+            {stepsToTake.map(step => (<Step step={step}/>))}
+          </Row>   
+        </Section>
+
+        <Contact/>
         <DefaultFooter />
       </div>
     </>
