@@ -8,6 +8,7 @@ import {
 
 import { 
   Icon,
+  Grid,
 } from '@material-ui/core/';
 
 import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
@@ -18,6 +19,7 @@ import Contact from "components/General/Contact.js";
 import TouchAppIcon from '@material-ui/icons/TouchApp';
 import GavelIcon from '@material-ui/icons/Gavel';
 import CheckCircleOutlineIcon from '@material-ui/icons/CheckCircleOutline';
+import DoneIcon from '@material-ui/icons/Done';
 
 
 function Step(props) {
@@ -53,6 +55,21 @@ const stepsToTake = [
 ];
 
 
+const benefits = [
+  {
+    title: "Facilidad",
+    summary: "Porque la herramienta facilita las cosas.",
+  },
+  {
+    title: "Seguridad",
+    summary: "Porque la herramienta mantiene seguras las cosas.",
+  },
+  {
+    title: "Disponibilidad",
+    summary: "Porque la herramienta tiene la informacion siempre disponible.",
+  },
+];
+
 
 const summary = "Aquí tienen que ir dos oraciones más de resumen de la GBH y como se relaciona al mercado de valores en \
               terminos de representacion de obligacionistas. Al final una oración más describiendo la plataforma e invitando \
@@ -67,11 +84,13 @@ function ProductPage(props) {
   const headerImage = "url(" + require("assets/img/bg4.jpg") + ")";
   React.useEffect(() => {
     document.body.classList.add("profile-page");
+    document.body.classList.add("menu-on-left");
     document.body.classList.add("sidebar-collapse");
     document.documentElement.classList.remove("nav-open");
     return function cleanup() {
       document.body.classList.remove("profile-page");
       document.body.classList.remove("sidebar-collapse");
+      document.body.classList.remove("menu-on-left");
     };
   });
   return (
@@ -87,7 +106,40 @@ function ProductPage(props) {
         <Section className="text-center" title="Nuestra Aplicación Web" greyBackground={true}>
           <Col className="ml-auto mr-auto text-center" md="10">
             <h5 className="text">{appSummary}</h5>
+            <Grid 
+              container
+              direction="row"
+              justify="space-around"
+              style={{marginTop: '8%'}}
+            >
+              <Grid item>
+              <Grid 
+                container
+                direction="column"
+                alignItems="left"
+              >
+                {benefits.map(benefit => 
+                  (<Grid item style={{marginBottom: 16}}>
+                    <Grid 
+                      container
+                      direction="row"
+                    >
+                      <DoneIcon fontSize="medium"/>
+                      <div style={{marginLeft: 12, textAlign: 'left', maxWidth: '88%'}}>
+                        <div className="category text-info text-left">{benefit.title}</div>
+                        <a>{benefit.summary}</a>
+                      </div>
+                    </Grid>
+                  </Grid>))
+                }
+              </Grid>
+              </Grid>
+              <Grid item >
+                <img src={require("assets/img/Partnership.png")} style={{maxHeight: '100%'}}/>
+              </Grid>
+            </Grid>
           </Col>
+          
         </Section>
         <Section className="text-center" title="Trabajemos juntos" >
           <h5 className="text">Una oracion corta de los pasos a seguir</h5>

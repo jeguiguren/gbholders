@@ -27,10 +27,12 @@ function AboutPage() {
   React.useEffect(() => {
     document.body.classList.add("landing-page");
     document.body.classList.add("sidebar-collapse");
+    document.body.classList.add("menu-on-left");
     document.documentElement.classList.remove("nav-open");
     return function cleanup() {
       document.body.classList.remove("landing-page");
       document.body.classList.remove("sidebar-collapse");
+    document.body.classList.remove("menu-on-left");
     };
   });
   const headerImage = "url(" + require("assets/img/bg5.jpg") + ")";
@@ -49,7 +51,7 @@ function AboutPage() {
             </h5>
           </Col>
         </Section>
-        <Section className="text-center" title="Nuestros Clientes">
+        <Section className="text-center" title="Nuestros Clientes" greyBackground={true}>
           <h5 className="description" >
               Con mas de una década de experiencia, GB Holders ha formado parte de las emsiones de múltiples empresas ecuatorianas. 
           </h5>
