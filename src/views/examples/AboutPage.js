@@ -21,6 +21,7 @@ import OurTeam from "components/General/OurTeam.js";
 import ClientCarousel from 'components/General/ClientCarousel.js';
 import Section from 'components/General/Section.js';
 
+
 function AboutPage() {
   const [firstFocus, setFirstFocus] = React.useState(false);
   const [lastFocus, setLastFocus] = React.useState(false);

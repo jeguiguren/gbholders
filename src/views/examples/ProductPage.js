@@ -71,9 +71,15 @@ const benefits = [
 ];
 
 
-const summary = "Aquí tienen que ir dos oraciones más de resumen de la GBH y como se relaciona al mercado de valores en \
-              terminos de representacion de obligacionistas. Al final una oración más describiendo la plataforma e invitando \
-              a probarla.";
+
+const summary = "A través de nuestra herramienta digital, ofrecemos el servicio de Representación \
+de los Obligacionistas, optimizando el tiempo y los recursos humanos de los emisores de valores, \
+generando informes y notificaciones en tiempo real para el público inversionista en general, \
+calificadores de riesgo, casas de valores, bolsas de valores, inversionistas institucionales y \
+órganos de control, cuidando en todo momento que los cumplimientos de entrega de información por \
+parte de los emisores, lleguen al público de manera oportuna y completa, contando además con las \
+respectivas alertas de entrega de información y respaldos de información entregada al representante de los obligacionista.";
+
 
 const appSummary = "Aquí tienen que ir 3-4 oraciones describiendo la plataforma e invitando a probarla. Por que \
   trae el valor agregado y simplifica el trabajo de sus agentes financieros. Enfatizar seguridad, facilidad, availability. (en vertical grid form) ";
