@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 // reactstrap components
 import {
@@ -7,7 +7,6 @@ import {
 } from "reactstrap";
 
 import { 
-  Icon,
   Grid,
 } from '@material-ui/core/';
 

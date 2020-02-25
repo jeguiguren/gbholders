@@ -2,8 +2,6 @@ import React from "react";
 
 // reactstrap components
 import {
-  Container,
-  Row,
   Col
 } from "reactstrap";
 import { makeStyles } from '@material-ui/core/styles';
@@ -12,15 +10,12 @@ import { makeStyles } from '@material-ui/core/styles';
 import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
 import GenericHeader from "components/Headers/GenericHeader.js";
 import DefaultFooter from "components/Footers/DefaultFooter.js";
-import DarkFooter from "components/Footers/DarkFooter.js";
-import Contact from "components/General/Contact.js";
 import Section from 'components/General/Section.js';
 
 import { 
   Typography ,
   Grid,
   Paper,
-  CardMedia,
   Tabs,
   Tab,
   Box,
@@ -51,27 +46,6 @@ const informes = [
 ];
 
 
-class InformesGrid extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {informes: informes};
-  }
-  render() {
-    return (
-      <Section>
-        <Grid container justify="center" spacing={10}>
-          {this.state.informes.map(value => (
-            <Grid key={value} item>
-              <Paper style={{ height: 240, width: 300,}}/>
-            </Grid>
-          ))}
-        </Grid>
-      </Section>
-    );
-  }
-}
-
-
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -89,7 +63,7 @@ function TabPanel(props) {
   );
 }
 
-//
+
 function a11yProps(index) {
   return {
     id: `vertical-tab-${index}`,

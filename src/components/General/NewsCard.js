@@ -5,13 +5,10 @@ import { makeStyles } from '@material-ui/core/styles';
 import { 
   Typography ,
   Grid,
-  Paper,
   Card,
   CardActionArea,
-  CardActions,
   CardContent,
   CardMedia,
-  Button,
 } from '@material-ui/core/';
 
 import { Person, AccessTime } from '@material-ui/icons';
@@ -45,7 +42,7 @@ export default function NewsCard(props) {
           <Grid item xs={5}>
             <CardMedia
               className={classes.media}
-              image={require("assets/img/DefaultNews.jpg")}
+              image={image || require("assets/img/DefaultNews.jpg")}
               title="Contemplative Reptile"
             />
           </Grid>

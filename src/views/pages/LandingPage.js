@@ -2,7 +2,6 @@ import React from "react";
 
 // reactstrap components
 import {
-  Container,
   Row,
   Col
 } from "reactstrap";
@@ -14,21 +13,9 @@ import DefaultFooter from "components/Footers/DefaultFooter.js";
 import Contact from "components/General/Contact.js";
 import Section from 'components/General/Section.js';
 import { 
-  Typography ,
   Grid,
 } from '@material-ui/core/';
 
-const PageSection = (title, body) => (
-  <div className="section">
-    <Row>
-      <Col className="ml-auto mr-auto text-center" md="8">
-        <h2 className="title">{title}</h2>
-        <h5 className="text">{body}</h5>
-      </Col>
-    </Row>
-  </div>
-);
-//
 
 const resumen = "Somos una compañía de servicios legales con más de 20 años de experiencia en \
 legislación bursátil y emisión de obligaciones. Nuestros profesionales cuentan con especialización \

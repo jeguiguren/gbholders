@@ -1,27 +1,14 @@
 import React from "react";
 import ReactPaginate from 'react-paginate';
-import { makeStyles } from '@material-ui/core/styles';
 
-// reactstrap components
-import {
-  Container,
-  Row,
-  Col
-} from "reactstrap";
 
 // core components
 import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
 import GenericHeader from "components/Headers/GenericHeader.js";
 import DefaultFooter from "components/Footers/DefaultFooter.js";
-import Contact from "components/General/Contact.js";
 import Section from 'components/General/Section.js';
 import NewsCard from "components/General/NewsCard.js";
 
-import { 
-  Typography ,
-  Grid,
-  Paper,
-} from '@material-ui/core/';
 
 const news = [
 {

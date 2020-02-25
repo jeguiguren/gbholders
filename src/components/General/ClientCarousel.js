@@ -1,15 +1,8 @@
 import React from "react";
 
 import { 
-  Typography ,
   Grid,
 } from '@material-ui/core/';
-import { makeStyles } from '@material-ui/core/styles';
-
-import {
-  Container,
-  Row,
-} from "reactstrap";
 
 
 const clients = [ 
@@ -57,6 +50,7 @@ class ClientCarousel extends React.Component {
             return (
             <Grid item xs>
               <img
+              alt="..."
               src={client.logo}
               style={{width: 130, height: 70}}
             />

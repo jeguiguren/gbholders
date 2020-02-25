@@ -25,8 +25,6 @@ import "assets/css/now-ui-kit.css";
 import "assets/demo/demo.css";
 import "assets/demo/nucleo-icons-page-styles.css";
 // pages for this kit
-import Index from "views/Index.js";
-import NucleoIcons from "views/NucleoIcons.js";
 
 import LandingPage from "views/pages/LandingPage.js";
 import ProductPage from "views/pages/ProductPage.js";
