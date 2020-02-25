@@ -37,7 +37,7 @@ import LoginPage from "views/pages/LoginPage.js";
 ReactDOM.render(
   <BrowserRouter forceRefresh={true}>
     <Switch>
-        <Route path="/index" render={props => <LandingPage {...props} />} />
+        <Route path="/index" render={props => <LandingPage {...props} basename={process.env.PUBLIC_URL}/>} />
         
         <Route path="/landing-page" render={props => <LandingPage {...props} />}/>
         <Route path="/informes-page" render={props => <InformesPage {...props} />} />
