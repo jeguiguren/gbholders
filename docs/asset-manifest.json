@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/gbholders/static/css/main.4298a2c3.chunk.css",
+    "main.js": "/gbholders/static/js/main.499be2ea.chunk.js",
+    "main.js.map": "/gbholders/static/js/main.499be2ea.chunk.js.map",
+    "runtime~main.js": "/gbholders/static/js/runtime~main.4860e6ce.js",
+    "runtime~main.js.map": "/gbholders/static/js/runtime~main.4860e6ce.js.map",
+    "static/js/2.786c1ed1.chunk.js": "/gbholders/static/js/2.786c1ed1.chunk.js",
+    "static/js/2.786c1ed1.chunk.js.map": "/gbholders/static/js/2.786c1ed1.chunk.js.map",
+    "index.html": "/gbholders/index.html",
+    "precache-manifest.21eae8b9c26aeb5403c7982ec2ad56ba.js": "/gbholders/precache-manifest.21eae8b9c26aeb5403c7982ec2ad56ba.js",
+    "service-worker.js": "/gbholders/service-worker.js",
+    "static/css/main.4298a2c3.chunk.css.map": "/gbholders/static/css/main.4298a2c3.chunk.css.map",
+    "static/media/CompanyLogo.png": "/gbholders/static/media/CompanyLogo.c0df655e.png",
+    "static/media/Condor.png": "/gbholders/static/media/Condor.5199462c.png",
+    "static/media/DefaultNews.jpg": "/gbholders/static/media/DefaultNews.cdc8975a.jpg",
+    "static/media/Partnership.png": "/gbholders/static/media/Partnership.cf7664eb.png",
+    "static/media/Pronaca.png": "/gbholders/static/media/Pronaca.2653d2bd.png",
+    "static/media/Unifer.png": "/gbholders/static/media/Unifer.1b5e394e.png",
+    "static/media/bg4.jpg": "/gbholders/static/media/bg4.4bff5d45.jpg",
+    "static/media/bg5.jpg": "/gbholders/static/media/bg5.056eb058.jpg",
+    "static/media/bg6.jpg": "/gbholders/static/media/bg6.d7d1aaf7.jpg",
+    "static/media/bg7.jpg": "/gbholders/static/media/bg7.607a4a36.jpg",
+    "static/media/eduardo.jpg": "/gbholders/static/media/eduardo.88be4d37.jpg",
+    "static/media/login.jpg": "/gbholders/static/media/login.b2101951.jpg",
+    "static/media/now-ui-kit.css": "/gbholders/static/media/nucleo-outline.8ebec31f.woff2"
+  }
+}
