@@ -1,5 +1,6 @@
 {
   "name": "now-ui-kit-react",
+  "homepage": "https://jeguiguren.github.io/gbholders",
   "version": "1.0.0",
   "private": true,
   "dependencies": {
@@ -24,6 +25,8 @@
     "yup": "^0.28.1"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -50,5 +53,8 @@
   },
   "optionalDependencies": {
     "typescript": "3.5.3"
+  },
+  "devDependencies": {
+    "gh-pages": "^2.2.0"
   }
 }

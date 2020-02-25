@@ -44,24 +44,6 @@ const informes = [
 ];
 
 
-function TabPanel(props) {
-  const { children, value, index, ...other } = props;
-
-  return (
-    <Typography
-      component="div"
-      role="tabpanel"
-      hidden={value !== index}
-      id={`vertical-tabpanel-${index}`}
-      aria-labelledby={`vertical-tab-${index}`}
-      {...other}
-    >
-      {value === index && <Box p={3}>{children}</Box>}
-    </Typography>
-  );
-}
-
-
 function a11yProps(index) {
   return {
     id: `vertical-tab-${index}`,
@@ -80,6 +62,26 @@ const useStyles = makeStyles(theme => ({
     borderRight: `1px solid ${theme.palette.divider}`,
   },
 }));
+
+
+
+function TabPanel(props) {
+  const { children, value, index, ...other } = props;
+
+  return (
+    <Typography
+      component="div"
+      role="tabpanel"
+      hidden={value !== index}
+      id={`vertical-tabpanel-${index}`}
+      aria-labelledby={`vertical-tab-${index}`}
+      {...other}
+    >
+      {value === index && <Box p={3}>{children}</Box>}
+    </Typography>
+  );
+}
+
 
 function InformesPage() {
   const classes = useStyles();
@@ -104,13 +106,8 @@ function InformesPage() {
   return (
     <>
       <ExamplesNavbar />
-        <GenericHeader image={headerImage} title="" subtitle="Informes de Emisión"/>
-        <Section className="text-center" title="Experiencia legal en el Mercado de Valores">
-          <Col className="ml-auto mr-auto text-center" md="10">
-            <h5 className="text">Hola</h5>
-          </Col>
-        </Section>    
-        <Section className="text-center" title="Experiencia legal en el Mercado de Valores">
+        <GenericHeader image={headerImage} title="" subtitle="Informes de Emisión"/>    
+        <Section>
           <div className={classes.root}>
             <Tabs
               orientation="vertical"
