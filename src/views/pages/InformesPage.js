@@ -14,8 +14,6 @@ import Section from 'components/General/Section.js';
 
 import { 
   Typography ,
-  Grid,
-  Paper,
   Tabs,
   Tab,
   Box,
