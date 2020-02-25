@@ -35,7 +35,7 @@ import AboutPage from "views/pages/AboutPage.js";
 import LoginPage from "views/pages/LoginPage.js";
 
 ReactDOM.render(
-  <BrowserRouter forceRefresh={true}>
+  <BrowserRouter forceRefresh={true} basename="/src">
     <Switch>
         <Route path="/index" render={props => <LandingPage {...props}/>} />
         
