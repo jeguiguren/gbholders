@@ -27,29 +27,27 @@ import "assets/demo/nucleo-icons-page-styles.css";
 // pages for this kit
 import Index from "views/Index.js";
 import NucleoIcons from "views/NucleoIcons.js";
-import LoginPage from "views/examples/LoginPage.js";
-import LandingPage from "views/examples/LandingPage.js";
-import AboutPage from "views/examples/AboutPage.js";
-import ProductPage from "views/examples/ProductPage.js";
+
+import LandingPage from "views/pages/LandingPage.js";
+import ProductPage from "views/pages/ProductPage.js";
+import InformesPage from "views/pages/InformesPage.js";
+import NewsPage from "views/pages/NewsPage.js";
+import AboutPage from "views/pages/AboutPage.js";
+
+import LoginPage from "views/pages/LoginPage.js";
 
 ReactDOM.render(
   <BrowserRouter forceRefresh={true}>
     <Switch>
-        <Route 
-          path="/index" 
-          render={props => <LandingPage {...props} />} />
-        <Route
-          path="/nucleo-icons"
-          render={props => <NucleoIcons {...props} />}
-        />
-        <Route
-          path="/landing-page"
-          render={props => <LandingPage {...props} />}
-        />
-        <Route path="/login-page" render={props => <LoginPage {...props} />} />
-        <Route path="/about-page" render={props => <AboutPage {...props} />} />
-        <Route path="/product-page" render={props => <ProductPage {...props} />} />
+        <Route path="/index" render={props => <LandingPage {...props} />} />
         
+        <Route path="/landing-page" render={props => <LandingPage {...props} />}/>
+        <Route path="/informes-page" render={props => <InformesPage {...props} />} />
+        <Route path="/product-page" render={props => <ProductPage {...props} />} />
+        <Route path="/news-page" render={props => <NewsPage {...props} />} />
+        <Route path="/about-page" render={props => <AboutPage {...props} />} />
+        
+        <Route path="/login-page" render={props => <LoginPage {...props} />} />
         <Redirect to="/index" />
         <Redirect from="/" to="/index" />
       

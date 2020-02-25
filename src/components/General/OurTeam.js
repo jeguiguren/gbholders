@@ -42,19 +42,20 @@ function TeamMember(props) {
 }
 
 const teamMembers = [
-  {
-    name: "Dayana Miranda",
-    title: "Asesora Financiera",
-    bio: "Especialista en inversiones dentro del Mercado de Valores.",
-    headhsot: require("assets/img/dayana.jpg"),
-    linkedin: "https://www.linkedin.com/in/dayana-miranda-89913948/",
-  },
+  
   {
     name: "Eduardo Aguirre",
     title: "Gerente General",
     bio: "Abogado especializado en Derecho Financiero y Empresarial.",
     headhsot: require("assets/img/eduardo.jpg"),
     linkedin: "https://www.linkedin.com/in/eduardo-aguirre-b1950248/",
+  },
+  {
+    name: "Dayana Miranda",
+    title: "Asesora Financiera",
+    bio: "Especialista en inversiones dentro del Mercado de Valores.",
+    headhsot: require("assets/img/dayana.jpg"),
+    linkedin: "https://www.linkedin.com/in/dayana-miranda-89913948/",
   },
   {
     name: "Jorge Eguiguren",

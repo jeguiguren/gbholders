@@ -96,6 +96,16 @@ function ExamplesNavbar() {
                   </NavLink>
                 </NavItem>
                 <NavItem>
+                  <NavLink to="/informes-page" tag={Link}>
+                    Informes de Emisión
+                  </NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink to="/news-page" tag={Link}>
+                    Noticias
+                  </NavLink>
+                </NavItem>
+                <NavItem>
                   <NavLink to="/about-page" tag={Link}>
                     Nosotros
                   </NavLink>
