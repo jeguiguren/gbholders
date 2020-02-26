@@ -7,7 +7,8 @@ import { Container } from "reactstrap";
 
 function GenericHeader(props) {
   let pageHeader = React.createRef();
-  const { image, title, subtitle } = props;
+  const { image, title, subtitle, isHome } = props;
+  let headerClass = isHome ? "page-header" : "page-header page-header-small";
   React.useEffect(() => {
     if (window.innerWidth > 991) {
       const updateScroll = () => {
@@ -23,7 +24,7 @@ function GenericHeader(props) {
   });
   return (
     <>
-      <div className="page-header page-header-small">
+      <div className={headerClass}>
         <div
           className="page-header-image"
           style={{

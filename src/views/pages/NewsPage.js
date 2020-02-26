@@ -8,53 +8,23 @@ import GenericHeader from "components/Headers/GenericHeader.js";
 import DefaultFooter from "components/Footers/DefaultFooter.js";
 import Section from 'components/General/Section.js';
 import NewsCard from "components/General/NewsCard.js";
+import { getNews } from 'components/General/Api.js';
 
-
-const news = [
-{
-  title: 'La bolsa moviliza más plata: $11.796 Millones 1',
-  preview: 'Alrededor del 11 % del Producto Interno Bruto transó el mercado de valores. La banca domina el índice accionario.',
-  author: 'Marketing',
-  date: '13 Enero 2020',
-},
-{
-  title: 'La bolsa moviliza más plata: $11.796 Millones 2',
-  preview: 'Alrededor del 11 % del Producto Interno Bruto transó el mercado de valores. La banca domina el índice accionario.',
-  author: 'Marketing',
-  date: '13 Enero 2020',
-},
-{
-  title: 'La bolsa moviliza más plata: $11.796 Millones 3',
-  preview: 'Alrededor del 11 % del Producto Interno Bruto transó el mercado de valores. La banca domina el índice accionario.',
-  author: 'Marketing',
-  date: '13 Enero 2020',
-},
-{
-  title: 'La bolsa moviliza más plata: $11.796 Millones 4',
-  preview: 'Alrededor del 11 % del Producto Interno Bruto transó el mercado de valores. La banca domina el índice accionario.',
-  author: 'Marketing',
-  date: '13 Enero 2020',
-},
-{
-  title: 'La bolsa moviliza más plata: $11.796 Millones 5',
-  preview: 'Alrededor del 11 % del Producto Interno Bruto transó el mercado de valores. La banca domina el índice accionario.',
-  author: 'Marketing',
-  date: '13 Enero 2020',
-},
-];
 
 
 class NewsGrid extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {data: [], pageCount: 0, offset: 0, perPage: 3};
+    this.state = {data: [], news: [], pageCount: 0, offset: 0, perPage: 3, isLoading: true};
   }
 
-
+ 
   getData() {
-    let data = news.slice(this.state.offset, this.state.offset + this.state.perPage);
-    let pageCount = Math.ceil(news.length / this.state.perPage);
-    this.setState({data, pageCount});
+    getNews().then(res => {
+      let news = res.slice(this.state.offset, this.state.offset + this.state.perPage);
+      let pageCount = Math.ceil(res.length / this.state.perPage);
+      this.setState({data: res, pageCount, isLoading: false, news});
+    });
   }
 
   componentDidMount() {
@@ -74,8 +44,8 @@ class NewsGrid extends React.Component {
   render() {
     return (
        <div className="commentBox">
-        {this.state.data.map(item => (
-          <NewsCard title={item.title} preview={item.preview} author={item.author} date={item.date}/>))}
+        {this.state.news.map(item => (
+          <NewsCard title={item.title} preview={item.preview} author={item.author} date={item.date} url={item.url}/>))}
 
         <div style={{justifyContent: 'center', display: 'flex'}}>
           <ReactPaginate

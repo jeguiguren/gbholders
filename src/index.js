@@ -38,7 +38,6 @@ ReactDOM.render(
   <BrowserRouter forceRefresh={true}>
     <Switch>
         <Route path="/index" render={props => <LandingPage {...props}/>} />
-        
         <Route path="/landing-page" render={props => <LandingPage {...props} />}/>
         <Route path="/informes-page" render={props => <InformesPage {...props} />} />
         <Route path="/product-page" render={props => <ProductPage {...props} />} />

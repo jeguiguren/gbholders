@@ -16,19 +16,21 @@ import {
 } from '@material-ui/core/';
 
 
-function ExamplesNavbar() {
+function ExamplesNavbar(props) {
   const [navbarColor, setNavbarColor] = React.useState("navbar-transparent");
   const [collapseOpen, setCollapseOpen] = React.useState(false);
+  const { isHome } = props;
+  const navBarTransparentHeight = isHome ? 650 : 230;
   React.useEffect(() => {
     const updateNavbarColor = () => {
       if (
-        document.documentElement.scrollTop > 369 ||
-        document.body.scrollTop > 369
+        document.documentElement.scrollTop > (navBarTransparentHeight - 1) ||
+        document.body.scrollTop > (navBarTransparentHeight - 1)
       ) {
         setNavbarColor("");
       } else if (
-        document.documentElement.scrollTop < 370 ||
-        document.body.scrollTop < 370
+        document.documentElement.scrollTop < navBarTransparentHeight ||
+        document.body.scrollTop < navBarTransparentHeight
       ) {
         setNavbarColor("navbar-transparent");
       }

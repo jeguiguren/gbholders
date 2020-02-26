@@ -19,7 +19,13 @@ import TouchAppIcon from '@material-ui/icons/TouchApp';
 import GavelIcon from '@material-ui/icons/Gavel';
 import CheckCircleOutlineIcon from '@material-ui/icons/CheckCircleOutline';
 import DoneIcon from '@material-ui/icons/Done';
-
+import {
+  ProductPageSummaryTitle,
+  ProductPageSummaryBody,
+  ProductPageSecondaryTitle,
+  ProductPageSecondaryBody,
+  ProductPageSecondaryStructure,
+} from "assets/TextFields.js";
 
 function Step(props) {
   const { step } = props;
@@ -54,36 +60,6 @@ const stepsToTake = [
 ];
 
 
-const benefits = [
-  {
-    title: "Facilidad",
-    summary: "Porque la herramienta facilita las cosas.",
-  },
-  {
-    title: "Seguridad",
-    summary: "Porque la herramienta mantiene seguras las cosas.",
-  },
-  {
-    title: "Disponibilidad",
-    summary: "Porque la herramienta tiene la informacion siempre disponible.",
-  },
-];
-
-
-
-const summary = "A través de nuestra herramienta digital, ofrecemos el servicio de Representación \
-de los Obligacionistas, optimizando el tiempo y los recursos humanos de los emisores de valores, \
-generando informes y notificaciones en tiempo real para el público inversionista en general, \
-calificadores de riesgo, casas de valores, bolsas de valores, inversionistas institucionales y \
-órganos de control, cuidando en todo momento que los cumplimientos de entrega de información por \
-parte de los emisores, lleguen al público de manera oportuna y completa, contando además con las \
-respectivas alertas de entrega de información y respaldos de información entregada al representante de los obligacionista.";
-
-
-const appSummary = "Aquí tienen que ir 3-4 oraciones describiendo la plataforma e invitando a probarla. Por que \
-  trae el valor agregado y simplifica el trabajo de sus agentes financieros. Enfatizar seguridad, facilidad, availability. (en vertical grid form) ";
-
-
 
 function ProductPage(props) {
   const headerImage = "url(" + require("assets/img/bg4.jpg") + ")";
@@ -103,14 +79,14 @@ function ProductPage(props) {
       <ExamplesNavbar />
       <div className="wrapper">
         <GenericHeader image={headerImage} subtitle="Modernizamos los reportes financieros"/>
-        <Section className="text-center" title="Convenio de Representación">
+        <Section className="text-center" title={ProductPageSummaryTitle}>
           <Col className="ml-auto mr-auto text-center" md="10">
-            <h5 className="text">{summary}</h5>
+            <h5 className="text">{ProductPageSummaryBody}</h5>
           </Col>
         </Section>
-        <Section className="text-center" title="Nuestra Aplicación Web" greyBackground={true}>
+        <Section className="text-center" title={ProductPageSecondaryTitle} greyBackground={true}>
           <Col className="ml-auto mr-auto text-center" md="10">
-            <h5 className="text">{appSummary}</h5>
+            <h5 className="text">{ProductPageSecondaryBody}</h5>
             <Grid 
               container
               direction="row"
@@ -123,14 +99,14 @@ function ProductPage(props) {
                 direction="column"
                 alignItems="left"
               >
-                {benefits.map(benefit => 
+                {ProductPageSecondaryStructure.map(benefit => 
                   (<Grid item style={{marginBottom: 16}}>
                     <Grid 
                       container
                       direction="row"
                     >
                       <DoneIcon fontSize="medium"/>
-                      <div style={{marginLeft: 12, textAlign: 'left', maxWidth: '88%'}}>
+                      <div style={{marginLeft: 12, textAlign: 'left', maxWidth: '80%'}}>
                         <div className="category text-info text-left">{benefit.title}</div>
                         <a>{benefit.summary}</a>
                       </div>

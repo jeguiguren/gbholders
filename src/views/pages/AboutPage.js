@@ -13,6 +13,10 @@ import Contact from "components/General/Contact.js";
 import OurTeam from "components/General/OurTeam.js";
 import ClientCarousel from 'components/General/ClientCarousel.js';
 import Section from 'components/General/Section.js';
+import {
+  AboutPageSummaryTitle,
+  AboutPageSummaryBody,
+} from "assets/TextFields.js";
 
 
 function AboutPage() {
@@ -33,14 +37,9 @@ function AboutPage() {
       <ExamplesNavbar />
       <div className="wrapper">
         <GenericHeader image={headerImage} subtitle="Representantes de obligacionistas"/>
-        <Section className="section-team text-center" title="Nosotros" >
-          <Col className="ml-auto mr-auto text-center" md="8">
-            <h5 className="description">
-              Gbholders es una firma de abogados basada en un concepto original que busca 
-              diferenciarse positivamente de la competencia, aportando un valor agregado a sus 
-              servicios y otorgando confianza a sus clientes, basándose en la calidad técnica 
-              jurídica, cultura de trabajo, calidad de servicio y adaptación al cambio.
-            </h5>
+        <Section className="section-team text-center" title={AboutPageSummaryTitle}>
+          <Col className="ml-auto mr-auto text-center" md="10">
+            <h5 className="text">{AboutPageSummaryBody}</h5>
           </Col>
         </Section>
         <Section className="text-center" title="Nuestros Clientes" greyBackground={true}>

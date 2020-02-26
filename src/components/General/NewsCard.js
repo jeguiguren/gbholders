@@ -33,8 +33,7 @@ const useStyles = makeStyles({
 export default function NewsCard(props) {
   const classes = useStyles();
 
-  const { title, preview, image, author, date,  } = props;
-  const url = 'https://www.google.com';
+  const { title, preview, image, author, date, url } = props;
   return (
     <Card className={classes.root}>
       <CardActionArea onClick={e => window.open(url, '_blank')}>
