@@ -11,7 +11,6 @@ import GenericHeader from "components/Headers/GenericHeader.js";
 import DefaultFooter from "components/Footers/DefaultFooter.js";
 import Contact from "components/General/Contact.js";
 import OurTeam from "components/General/OurTeam.js";
-import ClientCarousel from 'components/General/ClientCarousel.js';
 import Section from 'components/General/Section.js';
 import {
   AboutPageSummaryTitle,
@@ -41,12 +40,6 @@ function AboutPage() {
           <Col className="ml-auto mr-auto text-center" md="10">
             <h5 className="text">{AboutPageSummaryBody}</h5>
           </Col>
-        </Section>
-        <Section className="text-center" title="Nuestros Clientes" greyBackground={true}>
-          <h5 className="description" >
-              Con mas de una década de experiencia, GB Holders ha formado parte de las emsiones de múltiples empresas ecuatorianas. 
-          </h5>
-          <ClientCarousel/>
         </Section>
         <Section className="section-team text-center" title="Nuestro Equipo">
           <OurTeam/>

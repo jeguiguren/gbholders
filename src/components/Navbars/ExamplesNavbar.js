@@ -93,7 +93,7 @@ function ExamplesNavbar(props) {
                 </NavItem>
                 <NavItem>
                   <NavLink to="/informes-page" tag={Link}>
-                    Informes de Emisión
+                    Informes de Gestión
                   </NavLink>
                 </NavItem>
                 <NavItem>
@@ -111,11 +111,12 @@ function ExamplesNavbar(props) {
             </Collapse>
           </Grid>
           <Grid item>
+
             <Button
               style={{margin: 0}}
               onClick={e => window.open("https://gbholders.laeradigital.net/public/", '_blank')}
             >
-              Ingresar
+              INGRESAR
             </Button>
           </Grid>
         </Grid>

@@ -70,10 +70,11 @@ function InformesPage() {
 
 
   React.useEffect(() => {
-      getInformes().then(res => {
-      setInformes(res);
-      setIsLoading(false);
-    });
+      getInformes().then(
+        res => {
+          setInformes(res);
+          setIsLoading(false);
+        });
   }, []);
 
 
@@ -81,11 +82,9 @@ function InformesPage() {
     setValue(newValue);
   };
 
-  return (
-    <>
-      <ExamplesNavbar />
-        <GenericHeader image={headerImage} title="" subtitle="Informes de Emisión"/>    
-        <Section>
+
+  const informesTabPanel = (
+    <Section>
           <Grid container>
             <Grid item xs={2}>
               <h3>Empresa</h3>
@@ -109,6 +108,24 @@ function InformesPage() {
             {informes.map((informe, index) => <TabPanel value={value} index={index}><CompanyTab informe={informe}/></TabPanel>)}
           </div>
         </Section>
+
+  )
+  //
+  const noInformesTabPanel = (
+    <Section>
+      <Col className="ml-auto mr-auto text-center" md="10">
+        <h5 className="text">Al momento no hay informes de gestión.</h5>
+      </Col>
+    </Section>
+  )
+  //
+
+  return (
+    <>
+      <ExamplesNavbar />
+        <GenericHeader image={headerImage} title="" subtitle="Informes de Gestión"/>    
+        {informes.length > 0 && informesTabPanel}
+        {informes.length == 0 && noInformesTabPanel}
       <DefaultFooter/>
     </>
   );
