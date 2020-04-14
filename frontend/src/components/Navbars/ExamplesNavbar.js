@@ -114,7 +114,7 @@ function ExamplesNavbar(props) {
 
             <Button
               style={{margin: 0}}
-              onClick={e => window.open("https://gbholders.laeradigital.net/public/", '_blank')}
+              onClick={e => window.open("https://application.gbholders.com/public/", '_blank')}
             >
               INGRESAR
             </Button>

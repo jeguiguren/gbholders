@@ -1,0 +1,4 @@
+{
+	"empresa": "CREATE TABLE Empresa (empresa_id UUID NOT NULL PRIMARY KEY, name VARCHAR NOT NULL, address VARCHAR NOT NULL, description VARCHAR NOT NULL)",
+	"informe": "CREATE TABLE Informe (informe_id UUID NOT NULL PRIMARY KEY, empresa_id UUID NOT NULL REFERENCES empresa(empresa_id)"
+}
