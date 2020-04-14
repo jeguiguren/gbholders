@@ -15,7 +15,7 @@ function DefaultFooter() {
             <img
               alt="..."
               src={require("assets/img/CompanyLogo.png")}
-              style={{ width: 140,}}
+              style={{ width: 140, height: 70,}}
             ></img>
           </div>
           <div className="copyright" id="copyright">
