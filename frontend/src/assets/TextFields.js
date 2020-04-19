@@ -53,9 +53,11 @@ respectivas alertas de entrega de información y respaldos de información entre
 
 export const ProductPageSecondaryTitle = "Nuestra Aplicación Web";
 
-export const ProductPageSecondaryBody = "Aquí tienen que ir 3-4 oraciones describiendo la plataforma e \
-invitando a probarla. Por que trae el valor agregado y simplifica el trabajo de sus agentes financieros. \
-Enfatizar seguridad, facilidad, availability. (en vertical grid form)";
+export const ProductPageSecondaryBody = "Facilita las relaciones entre Emisor, Obligacionistas, su representante y \
+Órgano de Control, a través de una aplicación que permite a las partes interactuar de forma remota. Se ajusta al \
+teletrabajo y evita desplazamientos innecesarios a las Asambleas de los Obligacionistas. También permite el envío automático \
+de los Informes de Gestión del Representante de los Obligacionistas hacia la Superintendencia de Companías, Valores y \
+Seguros, y a las Bolsas de Valores del país.";
 
 
 export const ProductPageSecondaryStructure = [
@@ -65,11 +67,11 @@ export const ProductPageSecondaryStructure = [
   },
   {
     title: "Seguridad",
-    summary: "Acceso restringido con metodología de encriptación SSL.",
+    summary: "Acceso restringido a usuarios acreditados.",
   },
   {
     title: "Disponibilidad",
-    summary: "Servidores de Amazon Web Services disponibles 24/7.",
+    summary: "Asambleas de Obligacionistas y entrega de información por medios telemáticos.",
   },
 ]
 

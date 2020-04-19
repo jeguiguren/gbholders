@@ -16,7 +16,7 @@ function DarkFooter() {
           ></img>
         </div>
         <div className="copyright" id="copyright">
-            © {new Date().getFullYear()}, GB Holders S.A.
+            © {new Date().getFullYear()}, GB Holders Cia. Ltda.
         </div>
       </Container>
     </footer>

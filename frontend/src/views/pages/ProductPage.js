@@ -78,7 +78,7 @@ function ProductPage(props) {
     <>
       <ExamplesNavbar />
       <div className="wrapper">
-        <GenericHeader image={headerImage} subtitle="Modernizamos los reportes financieros"/>
+        <GenericHeader image={headerImage} subtitle="Facilitamos la entrega de información a los emisores"/>
         <Section className="text-center" title={ProductPageSummaryTitle}>
           <Col className="ml-auto mr-auto text-center" md="10">
             <h5 className="text">{ProductPageSummaryBody}</h5>
@@ -100,7 +100,7 @@ function ProductPage(props) {
                 alignItems="left"
               >
                 {ProductPageSecondaryStructure.map(benefit => 
-                  (<Grid item style={{marginBottom: 16}}>
+                  (<Grid item style={{marginBottom: 16, maxWidth: 450}}>
                     <Grid 
                       container
                       direction="row"
@@ -123,7 +123,7 @@ function ProductPage(props) {
           
         </Section>
         <Section className="text-center" title="Trabajemos juntos" >
-          <h5 className="text">Una oracion corta de los pasos a seguir</h5>
+          <h5 className="text">El funcionamiento es muy sencillo.</h5>
           <Row>
             {stepsToTake.map(step => (<Step step={step}/>))}
           </Row>   
