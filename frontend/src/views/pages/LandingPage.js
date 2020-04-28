@@ -44,7 +44,7 @@ function LandingPage() {
 		<>
 			<ExamplesNavbar isHome={true}/>
 			<div className="wrapper">
-				<GenericHeader image={headerImage} title="GB Holders" subtitle="Abogados & Consolutores" isHome={true}/>
+				<GenericHeader image={headerImage} title="GB Holders" subtitle="Representantes de Obligacionistas" isHome={true}/>
 				<Section className="text-center" title={LandingPageSummaryTitle}>
 					<Col className="ml-auto mr-auto text-center" md="10">
 						<h5 className="text">{LandingPageSummaryBody}</h5>

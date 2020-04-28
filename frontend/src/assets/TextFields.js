@@ -10,7 +10,7 @@ en la rama legal, financiera y tecnológica, que nos permite adoptar las accione
 adecuada protección de los inversionistas que colocan sus recursos en Obligaciones de largo plazo y Papel comercial.";
 
 
-export const LandingPageSecondaryTitle = "Las Obligaciones en el Mercado de Malores";
+export const LandingPageSecondaryTitle = "Las Obligaciones en el Mercado de Valores";
 
 export const LandingPageSecondaryBody = "Las obligaciones son valores de renta fija emitidos por sociedades del sector financiero \
 que los inversionistas públicos y/o privados adquieren a través de bolsa con el fin de obtener una rentabilidad \
