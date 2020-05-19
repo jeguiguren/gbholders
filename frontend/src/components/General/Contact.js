@@ -1,4 +1,5 @@
 import React from "react";
+import axios from 'axios';
 
 // reactstrap components
 import {
@@ -20,7 +21,7 @@ function Contact(){
   const [firstFocus, setFirstFocus] = React.useState(false);
   const [lastFocus, setLastFocus] = React.useState(false);
   const [name, setName]= React.useState( null );
-  const [email, setEmail]= React.useState( null );
+  const [address, setAddress]= React.useState( null );
   const [message, setMessage]= React.useState( null );
 
   // const resetForm () => {
@@ -60,14 +61,14 @@ function Contact(){
                 >
                   <InputGroupAddon addonType="prepend">
                     <InputGroupText>
-                      <i className="now-ui-icons ui-1_email-85"></i>
+                      <i className="now-ui-icons ui-1_address-85"></i>
                     </InputGroupText>
                   </InputGroupAddon>
                   <Input
                     placeholder="Correo electrónico..."
                     type="text"
-                    name="email"
-                    onChange={e => setEmail(e.target.value)}
+                    name="address"
+                    onChange={e => setAddress(e.target.value)}
                     onFocus={() => setLastFocus(true)}
                     onBlur={() => setLastFocus(false)}
                   ></Input>
@@ -89,12 +90,35 @@ function Contact(){
                     color="info"
                     href="#pablo"
                     onClick={e => { 
-                      if (!(name && email && message)) {
-                        window.alert('Por favor completar todos los campos');
+                      if (!(name && address && message)) {
+                        window.alert('Por favor completar todos los campos.');
                       }
                       else {
-                        window.alert('Gracias por su mensaje');
+                        if (!(address.includes("@") && address.includes("."))) {
+                          window.alert('Correo electrónico inválido.');
+                        }
+                        else {
+                          const url = 'https://vs9vtq6rk2.execute-api.us-east-1.amazonaws.com/dev';
+                          const data = {name, address, message};
+                          const headers = {
+                            'Content-Type': 'application/json',
+                            'Access-Control-Allow-Origin': '*'
+                          };
 
+                          axios.post(url, data, { headers })
+                          .then(res => {
+                            console.log(res);
+                            window.alert('Gracias por su mensaje');
+                            setName(null);
+                            setAddress(null);
+                            setMessage(null);
+                          })
+                          .catch(error => {
+                            console.log(error);
+                            window.alert(error);
+                            window.alert('No se pudo enviar el mensaje');
+                          });
+                        }
                       }
                     }}
                     size="lg"
