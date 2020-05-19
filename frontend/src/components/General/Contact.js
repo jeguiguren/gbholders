@@ -101,11 +101,10 @@ function Contact(){
                           const url = 'https://vs9vtq6rk2.execute-api.us-east-1.amazonaws.com/dev';
                           const data = {name, address, message};
                           const headers = {
-                            'Content-Type': 'application/json',
-                            'Access-Control-Allow-Origin': '*'
+                            'Content-Type': 'application/x-www-form-urlencoded'
                           };
 
-                          axios.post(url, data, { headers })
+                          axios.post(url, data, { headers, mode: 'no-cors' })
                           .then(res => {
                             console.log(res);
                             window.alert('Gracias por su mensaje');
